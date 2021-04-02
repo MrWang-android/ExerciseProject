@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <declare-styleable name="MyText">
+        <attr name="textsize" format="dimension" />
+        <attr name="textcolor" format="color|reference" />
+        <attr name="textcontent" format="string" />
+        <attr name="inuputtype" format="enum">
+
+            <enum name="number" value="1" />
+            <enum name="string" value="2" />
+        </attr>
+
+
+    </declare-styleable>
+
+
+    <declare-styleable name="qqstepView">
+        <attr name="qqtextsize" format="dimension" />
+        <attr name="qqtextcolor" format="color|reference" />
+        <attr name="realizationColor" format="color"/>
+        <attr name="norealizationColor" format="color"/>
+        <attr name="boderwidth" format="dimension"/>
+
+    </declare-styleable>
+</resources>

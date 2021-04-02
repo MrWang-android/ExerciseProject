@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".CustomViewActivity">
+   <com.example.myapplication.customview.MyText
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       app:textcolor="@color/colorAccent"
+       app:inuputtype="string"
+       android:background="@color/colorPrimaryDark"
+       app:textcontent="top"
+       />
+
+   <com.example.myapplication.customview.QQStepView
+       android:id="@+id/qqstepview"
+       android:layout_width="200sp"
+       android:layout_height="200dp"
+       app:realizationColor="@color/color_dialog_content"
+       app:norealizationColor="@color/alertdialog_line"
+       app:qqtextcolor="@color/color_dialog_content"
+       app:qqtextsize="30sp"
+       app:boderwidth="10dp"
+       />
+
+
+</LinearLayout>

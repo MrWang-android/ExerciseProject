@@ -1,14 +1,15 @@
 package com.example.myapplication
 
-import androidx.appcompat.app.AppCompatActivity
+import android.content.Intent
 import android.os.Bundle
 import android.os.Handler
 import android.os.Message
 import android.util.Log
 import android.view.View
 import android.widget.Toast
-
+import androidx.appcompat.app.AppCompatActivity
 import kotlinx.android.synthetic.main.activity_main.*
+
 class MainActivity : AppCompatActivity() ,View.OnClickListener{
 
 
@@ -67,12 +68,21 @@ class MainActivity : AppCompatActivity() ,View.OnClickListener{
     override fun onClick(v: View?) {
         when (v?.id) {
             R.id.button_left->{
-                Thread(Runnable {
+              /*  Thread(Runnable {
                     val message = Message.obtain()
                     val m = Message()
                     message.what = UPDATE_TEXT
                     mhandler.sendMessage(message)
-                }).start()
+                }).start()*/
+
+
+                val intent = Intent(this, CustomViewActivity::class.java)
+                intent.putExtra("type", 2)
+                intent.putExtra("flag", 2)
+                intent.putExtra("title_name", "蓝天检测")
+                intent.putExtra("type_name", "品牌厂价")
+                startActivity(intent)
+
             }
             R.id.button_right->{
 
@@ -106,12 +116,11 @@ class MainActivity : AppCompatActivity() ,View.OnClickListener{
                     val get = list!!.get(index!!)
                     if (index!!+2 > list!!.size){
                         list!!.add( list!!.get(index!!))
-                        list!!.removeAt(index!!)
                     }else{
                         list!!.add(index!!+2, get)
-                        list!!.removeAt(index!!)
                     }
 
+                    Log.i("log",list!!.toString())
                     Thread(Runnable {
                         val message = Message.obtain()
                         val m = Message()
